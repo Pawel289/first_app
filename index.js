@@ -1,21 +1,16 @@
-const express = require("express");
-const http = require('http');
-const fs = require('fs');
+const express = require('express');
 const path = require('path');
+const app = express();
 
-app = express();
+// Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(express.static(__dirname+'scripts'));
-//app.use(express.static('libs'));
-const MIME_TYPES = {
-    ".html": "text/html",
-    ".css": "text/css",
-    ".jpg": "image/jpeg"
-};
+// Route for the index page
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
-const server = http.createServer(function (req,res){
-    const filePath = path.join(__dirname, 'public/index.html');
-    const fileStream = fs.createReadStream(filePath);
-    fileStream.pipe(res);
-}).listen(8081);
-
+// Start the server
+app.listen(8081, function() {
+    console.log('Server started on port 8081');
+});
