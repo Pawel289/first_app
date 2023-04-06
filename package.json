@@ -20,7 +20,9 @@
   "dependencies": {
     "backbone": "^1.4.1",
     "express": "^4.18.2",
+    "jquery": "^3.6.4",
     "nodemon": "^2.0.22",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "underscore": "^1.13.6"
   }
 }
