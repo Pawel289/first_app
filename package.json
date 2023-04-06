@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Pawel289/first_app#readme",
   "dependencies": {
+    "backbone": "^1.4.1",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "requirejs": "^2.3.6"
   }
 }
