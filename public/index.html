@@ -7,6 +7,35 @@
 <body>
 <p>Siemka!</p>
 
-<script src="/scripts/scripts.js"></script>
+<script id="personTemplate" type="text/template">
+
+    <span> <%= name %> </span>
+    <strong> <%= age %></strong>
+
+    <!--
+    <% for(let i=0 ; i < hobbies.length ; i++) { %>
+        <i> <%= hobbies[i] %> </i>
+    <% } %>
+-->
+
+
+    <!-- alternatywa dla powyższej pętli
+    <%= hobbies.join(", ") %> -->
+
+</script>
+
+<script id="personDetailsTemplate" type="text/template">
+<h2>Szczegóły</h2>
+
+<strong>Imię:</strong> <span><%=name%></span><br>
+<strong>Wiek:</strong> <span><%=age%></span><br>
+<strong>Zainteresowania:</strong> <span><%=hobbies.join(", ")%></span><br>
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html>
